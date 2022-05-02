@@ -48,8 +48,9 @@
               title="守护进程状态"
               sub-title="已正确连接数 / 已配置总数"
               :value="`${valueCard.availableDaemon}/${valueCard.totalDaemon}`"
-              style="height: 260px"
-              font-class="el-icon-s-data"
+              style="height: 11em"
+              font-class="el-icon-connection color-icon-green"
+              v-loading="loading"
             >
             </ValueCard>
           </el-col>
@@ -58,8 +59,9 @@
               title="实例运行状态"
               sub-title="正在运行数 / 全部实例总数"
               :value="`${valueCard.runningInstance}/${valueCard.totalInstance}`"
-              style="height: 260px"
-              font-class="el-icon-s-promotion"
+              style="height: 11em"
+              font-class="el-icon-s-promotion color-icon-yellow"
+              v-loading="loading"
             >
             </ValueCard>
           </el-col>
@@ -68,8 +70,9 @@
               title="用户登录次数"
               sub-title="登录失败次数 : 登录成功次数"
               :value="`${valueCard.failedLogin}:${valueCard.Logined}`"
-              style="height: 260px"
-              font-class="el-icon-upload"
+              style="height: 11em"
+              font-class="el-icon-s-custom color-icon-pink"
+              v-loading="loading"
             >
             </ValueCard>
           </el-col>
@@ -78,8 +81,9 @@
               title="系统负载"
               sub-title="面板所在主机 CPU，RAM 百分比"
               :value="`${valueCard.cpu}% ${valueCard.mem}%`"
-              style="height: 260px"
-              font-class="el-icon-s-flag"
+              style="height: 11em"
+              font-class="el-icon-cpu color-icon-puple"
+              v-loading="loading"
             >
             </ValueCard>
           </el-col>

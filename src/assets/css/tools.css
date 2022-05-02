@@ -19,6 +19,12 @@
   可以前往 https://mcsmanager.com/ 阅读用户协议，申请闭源开发授权等。
 */
 
+/*字体*/
+@font-face {
+  font-family:tx;
+  src:url(./tx.woff2)
+}
+
 /* 工具类 */
 .row-mb {
   margin-bottom: 10px;
@@ -146,4 +152,170 @@
   content: "*";
   color: #f56c6c;
   margin-right: 4px;
+}
+
+/* 首页图标颜色 */
+.color-icon-puple {
+    color: #8b89ff4d!important;
+    text-shadow: rgba(139,137,255,0.25) 0px 0px 5px;
+}
+
+.color-icon-green {
+  color: rgb(44, 175, 78)!important;
+  text-shadow: rgb(122 255 157) 0px 0px 5px;
+}
+
+.color-icon-yellow {
+  color: #ffe45b!important;
+  text-shadow: rgb(255 232 117) 0px 0px 5px;
+}
+
+.color-icon-pink {
+  color: rgb(255, 174, 234)!important;
+  text-shadow: rgb(255 144 246) 0px 0px 5px;
+}
+
+/* 一些按钮颜色 */
+.ItemBlueToPurple {
+  background: linear-gradient(to right, #5c97f0, #b769f3)!important;
+  box-shadow: 0 2px 6px rgb(141, 124, 250);
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBlueToPurpleDown {
+  box-shadow: 0 2px 6px #9978f2;
+  border: none;
+  background-image: linear-gradient(to top, #5c97f0, #b769f3)!important;
+}
+
+.pb:hover {
+  padding: 10px 16px;
+  border-radius: 12px;
+}
+
+.ItemGreenToBlue {
+  background: linear-gradient(to right, #59ed72, #31d3ed)!important;
+  box-shadow: 0 2px 6px #24cfb6;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemGreenToBlueDown {
+  background: linear-gradient(to top, #59ed72, #31d3ed)!important;
+  box-shadow: 0 2px 6px #24cfb6;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemGreenToBlue45 {
+  background: linear-gradient(45deg, #59ed72, #31d3ed)!important;
+  box-shadow: 0 2px 6px #24cfb6;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemGreen {
+  background: linear-gradient(to right,#1fcf96 , #31a96a)!important;
+  box-shadow: 0 2px 6px #2da96c;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemGreenDown {
+  background: linear-gradient(to top,#1fcf96 , #31a96a)!important;
+  box-shadow: 0 2px 6px #2da96c;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemOrangeToPink {
+  background: linear-gradient(to right, #ff7135, #e83c9a) !important;
+  box-shadow: 0 2px 6px #f3546d;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemOrangeDown {
+  background-image: linear-gradient(to bottom, #ffa425, #ffc36f)!important;
+  box-shadow: 0 2px 6px #ffc36f;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemOrange {
+  background-image: linear-gradient(to right, #ffa425, #ffc36f)!important;
+  box-shadow: 0 2px 6px #ffc36f;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemOrangeToRed {
+  background-image: linear-gradient(to right, #ff8200, #ff2f2f)!important;
+  box-shadow: 0 2px 6px #ff541b;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemOrangeToRedDown {
+  background-image: linear-gradient(to bottom, #ff8200, #ff2f2f)!important;
+  box-shadow: 0 2px 6px #ff541b;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemPink {
+  background: linear-gradient(to right, #e780a3, #e780a3) !important;
+  box-shadow: 0 2px 6px #ffa5c3;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBlueToPink {
+  background: linear-gradient(45deg, #54a8ff, #f997ff)!important;
+  box-shadow: 0 2px 6px #816bff;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBlack {
+  background: linear-gradient(31deg, #000000, #5a5a5a)!important;
+  box-shadow: 0 2px 6px #2a2a2a;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBrown {
+  background: linear-gradient(to right, #795548, #7e2809) !important;
+  box-shadow: 0 2px 6px #7c3a22;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemGrey {
+  background: linear-gradient(to right, #505050, #7a7a7a) !important;
+  box-shadow: 0 2px 6px #6a6a6a;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBlueGrey {
+  background: linear-gradient(to right, #607d8b, #8699ab) !important;
+  box-shadow: 0 2px 6px #6a8594;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemBlueGreyDown {
+  background: linear-gradient(to bottom, #607d8b, #8699ab) !important;
+  box-shadow: 0 2px 6px #6a8594;
+  color: #fff!important;
+  transition: all 0.5s;
+}
+
+.ItemDeepBlue {
+  background: linear-gradient(to right, #0a5476, #3875af) !important;
+  box-shadow: 0 2px 6px #226594;
+  color: #fff!important;
+  transition: all 0.5s;
 }
