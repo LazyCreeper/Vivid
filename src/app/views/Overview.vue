@@ -455,7 +455,11 @@ export default {
         dataset: {
           dimensions: ["time", "value"],
           source
-        }
+        },
+        //接口请求量
+        color: [
+          '#fff493'
+        ]
       });
       this.systemChart4.setOption({
         yAxis: {
@@ -464,7 +468,11 @@ export default {
         dataset: {
           dimensions: ["time", "runningInstance"],
           source
-        }
+        },
+        //总数，运行书
+        color: [
+        '#99f5bd','#dbff95'
+        ]
       });
     },
     setSystemChart() {
@@ -477,13 +485,21 @@ export default {
         dataset: {
           dimensions: ["time", "cpu"],
           source
-        }
+        },
+        //CPU
+        color: [
+          '#87c2fe'
+        ]
       });
       this.systemChart2.setOption({
         dataset: {
           dimensions: ["time", "mem"],
           source
-        }
+        },
+        ///面板段内存使用率
+        color: [
+          '#d58dff'
+        ]
       });
     },
     setChartSource() {
