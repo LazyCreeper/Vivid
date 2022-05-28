@@ -48,7 +48,7 @@ export default {
 .select-block {
   border: 1px solid #dcdfe6;
   cursor: pointer;
-  border-radius: 4px;
+  border-radius: 15px;
   overflow: hidden;
   transition: all 0.4s;
   padding: 4px 14px;

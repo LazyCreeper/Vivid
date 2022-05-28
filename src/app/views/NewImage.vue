@@ -49,7 +49,7 @@
       </LineOption>
       <div class="row-mt">
         <el-row :gutter="10">
-          <el-col :span="6" :offset="0">
+          <el-col :md="6" :offset="0">
             <SelectBlock style="min-height: 120px" @click="selectType(1)">
               <template #title>创建 OpenJDK 8 环境镜像</template>
               <template #info
@@ -58,13 +58,13 @@
               >
             </SelectBlock>
           </el-col>
-          <el-col :span="6" :offset="0">
+          <el-col :md="6" :offset="0">
             <SelectBlock style="min-height: 120px" @click="selectType(2)">
               <template #title>创建 OpenJDK 16 环境镜像</template>
               <template #info>内置 Java 16 运行时环境，适用于 Minecraft 1.17 版本的服务端</template>
             </SelectBlock>
           </el-col>
-          <el-col :span="6" :offset="0">
+          <el-col :md="6" :offset="0">
             <SelectBlock style="min-height: 120px" @click="selectType(5)">
               <template #title>创建 OpenJDK 17 环境镜像</template>
               <template #info
@@ -72,7 +72,7 @@
               >
             </SelectBlock>
           </el-col>
-          <el-col :span="6" :offset="0">
+          <el-col :md="6" :offset="0">
             <SelectBlock style="min-height: 120px" @click="selectType(3)">
               <template #title>创建 Ubuntu 环境镜像</template>
               <template #info>适用于 MC 基岩版服务端运行环境或者其他 Linux 程序</template>
@@ -80,7 +80,7 @@
           </el-col>
         </el-row>
         <el-row :gutter="10" class="row-mt">
-          <el-col :span="6" :offset="0">
+          <el-col :md="6" :offset="0">
             <SelectBlock style="min-height: 120px" @click="selectType(4)">
               <template #title>使用 DockerFile 自定义创建</template>
               <template #info
@@ -108,8 +108,13 @@
           <p class="sub-title-info">必须创建 /workspace 目录，此目录将自动挂载到实例的文件根目录</p>
         </div>
         <div class="row-mt">
-          <el-input type="textarea" :rows="14" placeholder="必填，请输入内容" v-model="dockerFile">
-          </el-input>
+          <el-input 
+            type="textarea" 
+            :rows="14" 
+            placeholder="必填，请输入内容" 
+            v-model="dockerFile"
+            style="word-break: break-all"
+          ></el-input>
         </div>
         <div class="sub-title row-mt">
           <p class="sub-title-title">创建后的镜像名与版本标识</p>
@@ -207,7 +212,7 @@ ENV LC_ALL=zh_CN.UTF-8
 ENV TZ=Asia/Shanghai
 WORKDIR /workspace
 `;
-        this.name = "mopenjdk";
+        this.name = "mcsm-openjdk";
         this.version = "8";
       }
       if (type === 2) {
@@ -216,7 +221,7 @@ RUN mkdir -p /workspace
 ENV TZ=Asia/Shanghai
 WORKDIR /workspace
 `;
-        this.name = "mopenjdk";
+        this.name = "mcsm-openjdk";
         this.version = "16";
       }
       if (type === 3) {
@@ -225,7 +230,7 @@ RUN mkdir -p /workspace
 RUN apt update
 WORKDIR /workspace
 `;
-        this.name = "mubuntu";
+        this.name = "mcsm-ubuntu";
         this.version = "latest";
       }
       if (type === 5) {
@@ -237,7 +242,7 @@ ENV LC_ALL=zh_CN.UTF-8
 ENV TZ=Asia/Shanghai
 WORKDIR /workspace
 `;
-        this.name = "mopenjdk";
+        this.name = "mcsm-openjdk";
         this.version = "17";
       }
       this.step = 2;

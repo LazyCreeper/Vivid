@@ -19,6 +19,9 @@
   可以前往 https://mcsmanager.com/ 阅读用户协议，申请闭源开发授权等。
 */
 
+:root {
+  --el-border-radius-base: 15px!important;
+}
 /*字体*/
 @font-face {
   font-family:tx;
@@ -181,12 +184,14 @@
   box-shadow: 0 2px 6px rgb(141, 124, 250);
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBlueToPurpleDown {
   box-shadow: 0 2px 6px #9978f2;
   border: none;
   background-image: linear-gradient(to top, #5c97f0, #b769f3)!important;
+  border: 0
 }
 
 .pb:hover {
@@ -194,11 +199,12 @@
   border-radius: 12px;
 }
 
-.ItemGreenToBlue {
+.ItemGreenToBlue,.el-button--success {
   background: linear-gradient(to right, #59ed72, #31d3ed)!important;
   box-shadow: 0 2px 6px #24cfb6;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0;
 }
 
 .ItemGreenToBlueDown {
@@ -206,6 +212,7 @@
   box-shadow: 0 2px 6px #24cfb6;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemGreenToBlue45 {
@@ -213,6 +220,7 @@
   box-shadow: 0 2px 6px #24cfb6;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemGreen {
@@ -220,6 +228,7 @@
   box-shadow: 0 2px 6px #2da96c;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemGreenDown {
@@ -227,13 +236,15 @@
   box-shadow: 0 2px 6px #2da96c;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
-.ItemOrangeToPink {
+.ItemOrangeToPink,.el-button--danger {
   background: linear-gradient(to right, #ff7135, #e83c9a) !important;
   box-shadow: 0 2px 6px #f3546d;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemOrangeDown {
@@ -241,13 +252,15 @@
   box-shadow: 0 2px 6px #ffc36f;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
-.ItemOrange {
+.ItemOrange,.el-button--warning {
   background-image: linear-gradient(to right, #ffa425, #ffc36f)!important;
   box-shadow: 0 2px 6px #ffc36f;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemOrangeToRed {
@@ -255,6 +268,7 @@
   box-shadow: 0 2px 6px #ff541b;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemOrangeToRedDown {
@@ -262,6 +276,7 @@
   box-shadow: 0 2px 6px #ff541b;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemPink {
@@ -269,6 +284,7 @@
   box-shadow: 0 2px 6px #ffa5c3;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBlueToPink {
@@ -276,6 +292,7 @@
   box-shadow: 0 2px 6px #816bff;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBlack {
@@ -283,6 +300,7 @@
   box-shadow: 0 2px 6px #2a2a2a;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBrown {
@@ -290,6 +308,7 @@
   box-shadow: 0 2px 6px #7c3a22;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemGrey {
@@ -297,6 +316,7 @@
   box-shadow: 0 2px 6px #6a6a6a;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBlueGrey {
@@ -304,6 +324,7 @@
   box-shadow: 0 2px 6px #6a8594;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemBlueGreyDown {
@@ -311,6 +332,7 @@
   box-shadow: 0 2px 6px #6a8594;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
 }
 
 .ItemDeepBlue {
@@ -318,4 +340,17 @@
   box-shadow: 0 2px 6px #226594;
   color: #fff!important;
   transition: all 0.5s;
+  border: 0
+}
+
+.ItemLightBlue,.el-button--primary {
+  background:linear-gradient(to right, #49BCFC, #2ec3f0) !important;
+  box-shadow: 0 0 10px #3abff5;
+  color: #fff!important;
+  transition: all 0.5s;
+  border: 0
+}
+
+.el-button--success:hover,.el-button--danger:hover,.el-button--primary:hover,.el-button--warning:hover {
+  filter: brightness(0.9);
 }

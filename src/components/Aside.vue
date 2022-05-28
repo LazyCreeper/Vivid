@@ -55,24 +55,24 @@
         <template #title>高级功能</template>
         <el-menu-item key="/services" index="/services">
           <i class="el-icon-connection"></i>
-          <template #title>守护进程管理</template>
+          <template #title>守护进程</template>
         </el-menu-item>
         <el-menu-item key="/container" index="/container">
           <i class="el-icon-copy-document"></i>
-          <template #title>镜像与容器</template>
+          <template #title>环境镜像</template>
         </el-menu-item>
         <!-- <el-menu-item key="/update" index="/update">
           <i class="el-icon-guide"></i>
           <template #title>版本控制</template>
         </el-menu-item> -->
       </el-menu-item-group>
-      <el-menu-item-group>
+      <!--<el-menu-item-group>
         <template #title>扩展功能</template>
         <el-menu-item key="/news" index="/news">
           <i class="el-icon-news"></i>
           <template #title>更新与通知</template>
         </el-menu-item>
-      </el-menu-item-group>
+      </el-menu-item-group>-->
       <el-menu-item-group>
         <template #title>更多</template>
         <el-menu-item key="/settings" index="/settings">

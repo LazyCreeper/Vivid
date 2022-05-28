@@ -54,6 +54,7 @@ export function initTerminalWindow(elem, fontSize = 13) {
     disableStdin: false,
     cursorStyle: "underline",
     cursorBlink: true,
+    fontFamily: "Cascadia Code, Menlo, consolas,monospace,tx",
     fontSize: fontSize,
     theme: {
       background: "#1e1e1e"

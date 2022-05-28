@@ -30,7 +30,7 @@
             sub-title="管理员所分配给您的所有实例总数"
             :value="this.info.total"
             style="height: 260px"
-            font-class="el-icon-s-data"
+            font-class="el-icon-s-data color-icon-pink"
           >
           </ValueCard>
         </el-col>
@@ -40,7 +40,7 @@
             sub-title="实例正在运行中的数量"
             :value="this.info.running"
             style="height: 260px"
-            font-class="el-icon-s-promotion"
+            font-class="el-icon-s-promotion color-icon-green"
           >
           </ValueCard>
         </el-col>
@@ -50,7 +50,7 @@
             sub-title="实例未处于运行中的数量"
             :value="this.info.stopped"
             style="height: 260px"
-            font-class="el-icon-s-flag"
+            font-class="el-icon-s-flag color-icon-puple"
           >
           </ValueCard>
         </el-col>
@@ -60,7 +60,7 @@
             sub-title="因主机忙碌/维护而暂时不可使用的实例数"
             :value="this.info.unknown"
             style="height: 260px"
-            font-class="el-icon-s-opportunity"
+            font-class="el-icon-s-opportunity color-icon-yellow"
           >
           </ValueCard>
         </el-col>
@@ -163,9 +163,15 @@
     style="font-size: 12px; color: #cdcdcd; text-align: center; margin-top: 40px"
   >
     <div>
-      <span>MCSManager is released under the AGPL-3.0 License</span>
-      <br />
-      <span>Copyright © 2022 Suwings</span>
+      <span
+        >Powered by
+        <a
+          style="color: ##afafaf; text-decoration: underline"
+          target="black"
+          href="https://github.com/MCSManager"
+          >MCSManager</a
+        >&nbsp;&nbsp;|&nbsp;&nbsp;Theme by <a style="color: #afafaf; text-decoration: underline" target="black" href="https://www.lazy.ink">Lazy</a><br>Released under the AGPL-3.0 License</span
+      >
     </div>
   </div>
 

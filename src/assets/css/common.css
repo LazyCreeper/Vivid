@@ -24,6 +24,10 @@ body {
   background-image: linear-gradient(45deg, #e4fff5, #ffeffb);
 }
 
+button {
+  font-family: tx,Microsoft Yahei,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 ::selection {
   background: rgba(255, 119, 219, 0.6);
   backdrop-filter: blur(5px);
@@ -184,7 +188,7 @@ body {
 }
 
 /* 卡片圆角 */
-.el-card {
+.el-card,.el-select__popper.el-popper {
   border-radius: 1.1em!important;
 }
 

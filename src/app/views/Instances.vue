@@ -74,13 +74,13 @@
             <el-button size="small" type="success" @click="toNewInstance">
               <i class="el-icon-plus"></i> 新建实例
             </el-button>
-            <el-button size="small" @click="batOpen" v-if="showTableList">
+            <el-button size="small" type="warning" @click="batOpen" v-if="showTableList">
               <i class="el-icon-video-play"></i> 开启
             </el-button>
-            <el-button size="small" @click="batStop" v-if="showTableList">
+            <el-button size="small" type="warning" @click="batStop" v-if="showTableList">
               <i class="el-icon-video-pause"></i> 关闭
             </el-button>
-            <el-button size="small" @click="batKill" v-if="showTableList">
+            <el-button size="small" type="warning" @click="batKill" v-if="showTableList">
               <i class="el-icon-video-pause"></i> 终止
             </el-button>
             <el-button size="small" type="danger" plain @click="batDelete(1)" v-if="showTableList">
@@ -288,12 +288,14 @@
             <el-table-column label="操作" style="text-align: center" width="180">
               <template #default="scope">
                 <el-button
+                  type=""
                   size="mini"
                   @click="editInstance(scope.row.serviceUuid, scope.row.instanceUuid)"
                 >
                   设置
                 </el-button>
                 <el-button
+                  type="info"
                   size="mini"
                   @click="toInstance(scope.row.serviceUuid, scope.row.instanceUuid)"
                 >
