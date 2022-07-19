@@ -1,20 +1,16 @@
 <!--
   Copyright (C) 2022 Suwings <Suwings@outlook.com>
-
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU Affero General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
   (at your option) any later version.
-  
-  According to the AGPL, it is forbidden to delete all copyright notices, 
+
+  According to the AGPL, it is forbidden to delete all copyright notices,
   and if you modify the source code, you must open source the
   modified source code.
-
   版权所有 (C) 2022 Suwings <Suwings@outlook.com>
-
   该程序是免费软件，您可以重新分发和/或修改据 GNU Affero 通用公共许可证的条款，
   由自由软件基金会，许可证的第 3 版，或（由您选择）任何更高版本。
-
   根据 AGPL 与用户协议，您必须保留所有版权声明，如果修改源代码则必须开源修改后的源代码。
   可以前往 https://mcsmanager.com/ 阅读用户协议，申请闭源开发授权等。
 -->
@@ -32,8 +28,8 @@
       <div class="sub-title">
         <div class="sub-title">关于配置文件</div>
         <div class="sub-title-info">
-          此配置适用于 BungeeCord
-          群组服务端软件，但由于此配置文件略微有些复杂，大部分配置只能进行简单修改，建议您使用文件在线管理功能编辑此文件。
+          此配置适用于 MCDReforged
+          服务端控制工具，建议搭配其<a href="https://mcdreforged.readthedocs.io/zh_CN/latest/permission.html">官方文档</a>进行修改。
         </div>
       </div>
     </template>
@@ -57,7 +53,6 @@
 import { getDescriptionByTitle, jsonToMap } from "../../app/service/common";
 import LineOption from "../LineOption";
 import LineOptionList from "../LineOptionList";
-
 export default {
   // eslint-disable-next-line vue/no-unused-components
   components: { LineOption, LineOptionList },
@@ -78,46 +73,12 @@ export default {
     return {
       config: null,
       description: {
-        prevent_proxy_connections: "是否向 Mojang 发送玩家 IP 数据以阻止使用了代理的玩家进入服务器",
-        listeners: [
-          {
-            query_port: "UDP查询端口",
-            motd: "当仅有一个默认服务器时，服务器将会显示给玩家的 Motd。当 ping_passthrough 被开启时，此项无效",
-            tab_list: "连接到服务器的玩家的 TAB 列表所显示的内容格式",
-            query_enabled: "是否开启 UDP 查询",
-            proxy_protocol: "是否开启对 HAProxy 的支持",
-            forced_hosts: "端口转发设置",
-            ping_passthrough: "是否开启 ping 穿透",
-            priorities: "优先级设置",
-            bind_local_address: "是否显示 BungeeCord 正在监听的 IP 地址",
-            host: "监听的 IP 地址和端口",
-            max_players:
-              "玩家客户端将会显示的最大玩家数，默认值为 1。此项只作为装饰，并未真实的最大玩家数设置",
-            tab_size: "显示在 TAB 列表上的最大玩家数量",
-            force_default_server: "每次玩家进入服务器时，是否强制将玩家传送到默认服务器中"
-          }
-        ],
-        remote_ping_cache: "",
-        network_compression_threshold: "",
-        permissions: {
-          default: "默认用户组权限",
-          admin: "管理员用户组权限"
-        },
-        log_pings: "是否在控制台记录玩家客户端向 BungeeCord 发起 ping 请求的记录",
-        connection_throttle: "断开时间",
-        connection_throttle_limit: "断开次数",
-        server_connect_timeout: "",
-        timeout: "超时时间",
-        player_limit: "整个 BungeeCord 实例能够接受的最大玩家数量，默认值为-1，即不限数量",
-        ip_forward: "是否启用 IP 追踪",
-        groups: "权限组设置",
-        remote_ping_timeout: "",
-        log_commands: "是否在控制台记录玩家输入的指令（仅记录 BungeeCord 指令）",
-        stats: "",
-        online_mode: "正版验证",
-        forge_support: "是否启用对 Forge 的支持",
-        disabled_commands: "禁用的指令",
-        servers: "下游服务端设置，只有在此处设置过的下游服务器才可被连接"
+        default_level: "新玩家默认的权限等级",
+        owner: "所有者",
+        admin: "管理员",
+        helper: "助手",
+        user: "普通玩家",
+        guest: "访客"
       }
     };
   }

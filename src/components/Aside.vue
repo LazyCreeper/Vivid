@@ -28,12 +28,14 @@
     background-color="#30313300"
     text-color="#686868"
     active-text-color="#fff"
-    :default-active="$route.path"
+    style="height: 100%; padding: 0px 8px"
+    :default-active="$route.meta.activeMenu || $route.path"
   >
     <el-scrollbar>
       <Logo></Logo>
       <el-menu-item-group>
         <template #title>基础功能</template>
+
         <el-menu-item key="/overview" index="/overview">
           <i class="el-icon-pie-chart"></i>
           <template #title>数据监控</template>
@@ -44,21 +46,21 @@
         </el-menu-item>
         <el-menu-item key="/users" index="/users">
           <i class="el-icon-user"></i>
-          <template #title>用户管理</template>
+          <template #title>用户中心</template>
         </el-menu-item>
-        <!-- <el-menu-item key="/home" index="/home">
-          <i class="el-icon-pie-chart"></i>
-          <template #title>个人简报</template>
-        </el-menu-item> -->
+        <el-menu-item key="/quickstart" index="/quickstart">
+          <i class="el-icon-circle-plus-outline"></i>
+          <template #title>快速开始</template>
+        </el-menu-item>
       </el-menu-item-group>
       <el-menu-item-group>
         <template #title>高级功能</template>
         <el-menu-item key="/services" index="/services">
           <i class="el-icon-connection"></i>
-          <template #title>守护进程</template>
+          <template #title>节点管理</template>
         </el-menu-item>
         <el-menu-item key="/container" index="/container">
-          <i class="el-icon-copy-document"></i>
+          <i class="el-icon-cpu"></i>
           <template #title>环境镜像</template>
         </el-menu-item>
         <!-- <el-menu-item key="/update" index="/update">
@@ -66,13 +68,13 @@
           <template #title>版本控制</template>
         </el-menu-item> -->
       </el-menu-item-group>
-      <!--<el-menu-item-group>
+      <!-- <el-menu-item-group>
         <template #title>扩展功能</template>
         <el-menu-item key="/news" index="/news">
           <i class="el-icon-news"></i>
           <template #title>更新与通知</template>
         </el-menu-item>
-      </el-menu-item-group>-->
+      </el-menu-item-group> -->
       <el-menu-item-group>
         <template #title>更多</template>
         <el-menu-item key="/settings" index="/settings">

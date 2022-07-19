@@ -38,7 +38,7 @@
           :to="{ path: item.path }"
           :key="index"
         >
-          <span class="only-pc-display">控制面板 / {{ item.title }}</span>
+          <span class="only-pc-display"><a href="./">控制面板</a>&nbsp;&nbsp;/&nbsp;&nbsp;<span>{{ item.title }}</span></span>
         </div>
         <!-- 电脑端显示全部内容 -->
         <!-- <el-breadcrumb separator="/" style="line-height: 28px" class="only-pc-display">
@@ -65,12 +65,9 @@
             </el-dropdown-menu>
           </template>
         </el-dropdown>
-        <!-- <el-tooltip content="消息" class="only-pc-display">
-          <el-button size="mini" icon="el-icon-bell" circle></el-button>
-        </el-tooltip>
-        <el-tooltip content="使用文档" class="only-pc-display">
+        <!--<el-tooltip content="使用文档" class="only-pc-display">
           <el-button size="mini" icon="el-icon-help" circle></el-button>
-        </el-tooltip> -->
+        </el-tooltip>-->
       </el-col>
     </el-row>
   </el-card>

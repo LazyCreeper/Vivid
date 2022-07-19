@@ -1,4 +1,4 @@
-/*
+<!--
   Copyright (C) 2022 Suwings <Suwings@outlook.com>
 
   This program is free software: you can redistribute it and/or modify
@@ -17,55 +17,27 @@
 
   根据 AGPL 与用户协议，您必须保留所有版权声明，如果修改源代码则必须开源修改后的源代码。
   可以前往 https://mcsmanager.com/ 阅读用户协议，申请闭源开发授权等。
-*/
+-->
 
-import { createStore } from "vuex";
+<template>
+  <div class="wrapper">
+    <el-card class="box-card">
+      <slot></slot>
+    </el-card>
+  </div>
+</template>
 
-// Vuex 状态管理
-const stateModel = {
-  token: "",
-  userInfo: {
-    uuid: "",
-    userName: "",
-    loginTime: "",
-    registerTime: "",
-    permission: 10,
-    instances: [],
-    apiKey: ""
-  },
-  panelStatus: {
-
-  },
-  gameProfile: null,
-  onlineNotice: null
-};
-
-const store = createStore({
-  state() {
-    return stateModel;
-  },
-  mutations: {
-    setToken(state, v) {
-      state.token = v;
-    },
-    setUserInfo(state, v) {
-      state.userInfo = v;
-    },
-    setGameProfile(state, v) {
-      state.gameProfile = v;
-    },
-    setOnlineNotice(state, v) {
-      state.onlineNotice = v;
-    },
-    setApiKey(state, v) {
-      state.userInfo.apiKey = v;
-    },
-    setPanelStatus(state, v) {
-      state.panelStatus = v;
-    }
+<script>
+export default {
+  props: {
+    size: String,
+    space: String
   }
-});
+};
+</script>
 
-window.store = store;
-
-export default store;
+<style scoped>
+.wrapper {
+  overflow: hidden;
+}
+</style>

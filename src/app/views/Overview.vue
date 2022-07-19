@@ -132,7 +132,7 @@
                   <i class="el-icon-circle-check"></i> 在线
                 </span>
                 <span class="color-red" v-if="!scope.row.status">
-                  <el-tooltip effect="dark" content="无法连接到指定ip或者密钥错误" placement="top">
+                  <el-tooltip effect="dark" content="无法连接到指定 IP 或者密钥错误" placement="top">
                     <span><i class="el-icon-warning-outline"></i> 离线</span>
                   </el-tooltip>
                 </span>
@@ -146,7 +146,7 @@
           <Panel v-loading="loading">
             <template #title>面板端接口请求量</template>
             <template #default>
-              <p>每1分钟统计间隔，总计1小时的请求历史</p>
+              <p>每 1 分钟统计间隔，总计 1 小时的请求历史</p>
               <div class="echart-wrapper">
                 <div id="echart-wrapper-main3" style="width: 100%; height: 200px"></div>
               </div>
@@ -157,7 +157,7 @@
           <Panel v-loading="loading">
             <template #title>面板端 CPU 使用率</template>
             <template #default>
-              <p>每10秒统计间隔，总十分钟的 CPU 历史使用率</p>
+              <p>每 10 秒统计间隔，总计 10 分钟的 CPU 历史使用率</p>
               <div class="echart-wrapper">
                 <div id="echart-wrapper-main" style="width: 100%; height: 200px"></div>
               </div>
@@ -170,7 +170,7 @@
           <Panel v-loading="loading">
             <template #title>分布式实例运行量</template>
             <template #default>
-              <p>每1分钟统计间隔，总计1小时的实例状态历史</p>
+              <p>每 1 分钟统计间隔，总计 1 小时的实例状态历史</p>
               <div class="echart-wrapper">
                 <div id="echart-wrapper-main4" style="width: 100%; height: 200px"></div>
               </div>
@@ -181,7 +181,7 @@
           <Panel v-loading="loading">
             <template #title>面板端内存使用率</template>
             <template #default>
-              <p>每10秒统计间隔，总十分钟的内存历史使用率</p>
+              <p>每 10 秒统计间隔，总计 10 分钟的内存历史使用率</p>
               <div class="echart-wrapper">
                 <div id="echart-wrapper-main2" style="width: 100%; height: 200px"></div>
               </div>
@@ -209,15 +209,11 @@
       </el-row>
     </template>
   </Panel>
-
-  <UserInit v-model:visible="initUserVisible"></UserInit>
 </template>
 
 <script>
 import * as echarts from "echarts";
 import Panel from "../../components/Panel";
-import UserInit from "../../components/UserInit";
-// import LineLabel from "../../components/LineLabel";
 import { request } from "../service/protocol";
 import { API_OVERVIEW } from "../service/common";
 import {
@@ -227,7 +223,7 @@ import {
 } from "../service/chart_option";
 import ValueCard from "../../components/ValueCard";
 export default {
-  components: { Panel, ValueCard, UserInit },
+  components: { Panel, ValueCard },
   data() {
     return {
       loading: true,
@@ -469,7 +465,7 @@ export default {
           dimensions: ["time", "runningInstance"],
           source
         },
-        //总数，运行书
+        //总数，运行数
         color: [
         '#99f5bd','#dbff95'
         ]
@@ -496,7 +492,7 @@ export default {
           dimensions: ["time", "mem"],
           source
         },
-        ///面板段内存使用率
+        ///面板端内存使用率
         color: [
           '#d58dff'
         ]
@@ -515,13 +511,6 @@ export default {
     this.loading = false;
     this.manualLink = window.onlineMCSManagerNotice ? window.onlineMCSManagerNotice() : null;
     this.startInterval();
-
-    setTimeout(() => {
-      const { isInit, permission } = this.$store.state.userInfo;
-      if (isInit === false && permission === 10) {
-        this.initUserVisible = true;
-      }
-    }, 1000);
   },
   beforeUnmount() {
     this.stopInterval();

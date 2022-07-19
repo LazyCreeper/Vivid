@@ -48,8 +48,8 @@
               size="small"
               style="width: 160px"
             ></el-input>
-            <el-button size="small" @click="refresh">
-              <i class="el-icon-refresh"></i> 刷新
+            <el-button size="small" @click="refresh" type="primary">
+              <i class="el-icon-refresh"></i> 搜索
             </el-button>
           </ItemGroup>
         </el-col>
@@ -58,7 +58,6 @@
             <el-button
               type="primary"
               size="small"
-              plain
               @click="changeView(1)"
               v-show="showTableList"
               >简单视图</el-button
@@ -66,7 +65,6 @@
             <el-button
               type="primary"
               size="small"
-              plain
               @click="changeView(2)"
               v-show="!showTableList"
               >批量操作视图</el-button
@@ -74,13 +72,13 @@
             <el-button size="small" type="success" @click="toNewInstance">
               <i class="el-icon-plus"></i> 新建实例
             </el-button>
-            <el-button size="small" type="warning" @click="batOpen" v-if="showTableList">
+            <el-button size="small" @click="batOpen" v-if="showTableList">
               <i class="el-icon-video-play"></i> 开启
             </el-button>
-            <el-button size="small" type="warning" @click="batStop" v-if="showTableList">
+            <el-button size="small" @click="batStop" v-if="showTableList">
               <i class="el-icon-video-pause"></i> 关闭
             </el-button>
-            <el-button size="small" type="warning" @click="batKill" v-if="showTableList">
+            <el-button size="small" @click="batKill" v-if="showTableList">
               <i class="el-icon-video-pause"></i> 终止
             </el-button>
             <el-button size="small" type="danger" plain @click="batDelete(1)" v-if="showTableList">
@@ -153,11 +151,14 @@
           instanceStatusGray: item.status !== 3,
           CradInstance: true
         }"
+        :tipType="0"
       >
         <template #title>
-          <div style="font-size: 13px" class="only-line-text">
+          <span style="font-size: 13px" class="only-line-text">
             {{ item.nickname }}
-          </div>
+          </span>
+        </template>
+        <template #rtitle>
           <div>
             <el-dropdown trigger="click">
               <span class="el-dropdown-link">
@@ -245,7 +246,7 @@
             v-show="!notAnyInstance && currentRemoteUuid && showTableList"
           >
             <el-table-column type="selection" width="55"> </el-table-column>
-            <el-table-column prop="nickname" label="实例昵称" min-width="240">
+            <el-table-column prop="nickname" label="实例名称" min-width="240">
               <template #default="scope">
                 <div
                   @click="toInstance(scope.row.serviceUuid, scope.row.instanceUuid)"
@@ -288,14 +289,12 @@
             <el-table-column label="操作" style="text-align: center" width="180">
               <template #default="scope">
                 <el-button
-                  type=""
                   size="mini"
                   @click="editInstance(scope.row.serviceUuid, scope.row.instanceUuid)"
                 >
                   设置
                 </el-button>
                 <el-button
-                  type="info"
                   size="mini"
                   @click="toInstance(scope.row.serviceUuid, scope.row.instanceUuid)"
                 >
@@ -441,7 +440,7 @@ export default {
     // 获取守护进程具体实例列表
     async remoteSelectHandle() {
       try {
-        if (!this.currentRemoteUuid) throw new Error("还未选择远程守护进程");
+        if (!this.currentRemoteUuid) throw new Error("未选择远程守护进程");
         this.startedInstance = 0;
         this.instances = [];
         this.loading = true;
@@ -527,7 +526,7 @@ export default {
       router.push({ path: `/terminal/${serviceUuid}/${instanceUuid}/` });
     },
     async unlinkInstance(uuid, deleteFile = false) {
-      await this.$confirm("确定要进行移除/删除嘛？", "最终确认", {
+      await this.$confirm("确定要进行移除/删除吗？", "最终确认", {
         confirmButtonText: "确定",
         cancelButtonText: "取消",
         type: "warning"
@@ -549,7 +548,7 @@ export default {
     async batDelete(type) {
       if (type === 1) {
         await this.$confirm(
-          "确定要进行批量移除嘛？此操作不会删除实例实际文件，只会删除实例",
+          "确定要进行批量移除吗？此操作不会删除实例实际文件，只会删除实例",
           "最终确认",
           {
             confirmButtonText: "确定",

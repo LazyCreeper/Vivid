@@ -25,7 +25,7 @@
       <p class="color-black" style="font-size: 14px; font-weight: 600; letter-spacing: -0.4px">
         <slot name="title"></slot>
       </p>
-      <p>
+      <p class="sub-title">
         <slot name="info"></slot>
       </p>
     </div>
@@ -55,6 +55,9 @@ export default {
 }
 
 .select-block:hover {
-  border: 1px solid #409eff;
+  border: 1px solid #98dff5;
+  box-shadow: 0 0 8px #76e5ff;
+  transform: scale(1.02);
 }
+
 </style>

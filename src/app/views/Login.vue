@@ -100,10 +100,9 @@
               </div>
               <div class="login-info-wrapper row-mt">
                 <div>
-                  <span class="color-gray"
-                    >Powered by
-                    <a target="black" href="https://github.com/Suwings">MCSManager</a></span
-                  >
+                  <span class="color-gray" >
+                    Powered by <a target="black" href="https://github.com/MCSManager">MCSManager</a>&nbsp;&nbsp;|&nbsp;&nbsp;Theme by <a target="black" href="https://www.lazy.ink">Lazy</a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -153,7 +152,7 @@ export default {
       },
       close: false,
       closeWindow: false,
-      loginText: "登录",
+      loginText: "登 录",
       loading: false,
       cause: "",
       loginInfo: ""
@@ -368,7 +367,7 @@ export default {
   left: 0px;
   right: 0px;
   bottom: 0px;
-
+  background:linear-gradient(45deg, #dffff1, #ffeffa);
   display: flex;
   align-items: center;
 
